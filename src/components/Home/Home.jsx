@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import List from '../List/List'
 function Home(props) {
   return (
-    <div>
-      home
-    </div>
+    <List />
   )
 }
 
