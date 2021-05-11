@@ -1,15 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import List from '../List/List'
-function Home(props) {
-  return (
-    <List />
-  )
+
+export default class Home extends Component {
+  state = {
+    loading: false,
+    characters: []
+  }
+  render() {
+    return (
+      <List characters={this.state.characters}/>
+    )
+  }
 }
-
-Home.propTypes = {
-
-}
-
-export default Home
-
