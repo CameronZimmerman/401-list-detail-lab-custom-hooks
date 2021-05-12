@@ -19,7 +19,9 @@ function Character({ name, photoUrl, id }) {
 }
 
 Character.propTypes = {
-
+  name: PropTypes.string.isRequired,
+  photoUrl: PropTypes.string,
+  id: PropTypes.string.isRequired
 }
 
 export default Character

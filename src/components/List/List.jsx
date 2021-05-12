@@ -7,7 +7,7 @@ function List({characters}) {
     <ul aria-label="character-list">
       {characters.map(character => {
         return (
-          <li>
+          <li key={character.id}>
             <Character photoUrl={character.photoUrl} name={character.name} id={character.id}/>
           </li>
         )
@@ -17,7 +17,11 @@ function List({characters}) {
 }
 
 List.propTypes = {
-
+  characters: PropTypes.arrayOf(PropTypes.shape({
+    photoUrl: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired
+  }))
 }
 
 export default List
