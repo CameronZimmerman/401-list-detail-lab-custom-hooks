@@ -8,7 +8,7 @@ function List({characters}) {
       {characters.map(character => {
         return (
           <li>
-            <Character photoUrl={character.photoUrl} name={character.name}/>
+            <Character photoUrl={character.photoUrl} name={character.name} id={character.id}/>
           </li>
         )
       })}
