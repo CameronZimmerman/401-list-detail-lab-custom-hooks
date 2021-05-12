@@ -11,9 +11,9 @@ export const fetchCharacters = async () => {
   ))
 }
 
-export const fetchSingleCharacter = async (id) => {
-  const characterRaw = await fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${id}`)
-  const {name, photoUrl, id, affiliation, enemies, allies} = await charactersRaw.json();
+export const fetchSingleCharacter = async (charID) => {
+  const characterRaw = await fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${charID}`)
+  const {name, photoUrl, id, affiliation, enemies, allies} = await characterRaw.json();
 
   return {
     name,

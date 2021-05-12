@@ -14,9 +14,13 @@ export default function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/:id">
-          <DetailPage />
-        </Route>
+        <Route 
+          exact path="/:id"
+          render={(props) => (
+            <DetailPage {...props} />
+          )}
+         />
+          
       </Switch>
     </Router>
   )
