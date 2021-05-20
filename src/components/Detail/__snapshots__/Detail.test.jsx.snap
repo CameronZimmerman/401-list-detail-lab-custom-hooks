@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component should render a single characters 1`] = `
+<div
+  role="character-card"
+>
+  <p>
+    Cabbage merchant
+  </p>
+  <img
+    alt="Cabbage merchant"
+    src="https://vignette.wikia.nocookie.net/avatar/images/2/2f/Cabbage_merchant.png/revision/latest?cb=20140112200908"
+  />
+  <p>
+    allies: 
+    Cabbage Corp
+  </p>
+  <p>
+    enemies: 
+    The 
+  </p>
+  <p>
+    affiliation: 
+     Cabbage Corp Earth Kingdom
+  </p>
+</div>
+`;

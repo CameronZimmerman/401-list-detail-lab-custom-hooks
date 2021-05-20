@@ -1,17 +1,20 @@
-import react, {useState, useEffect, withRouter} from 'react'
-import { useParams } from 'react-router'
+import {useState, useEffect, withRouter} from 'react'
+import {useParams} from 'react-router'
 import fetchCharacters from '../services/avatarApi'
 
 const useGallery = () => {
   const [characters, setCharacters] = useState()
   const [loading, setLoading] = useState(true)
-  const { id } = useParams() || ""
+  const { id = '' } = useParams();
+  console.log(id)
 
   useEffect(() => {
-    const characters =  fetchCharacters(id)
-      .then(characters => setCharacters(characters))
+    const apiData =  fetchCharacters(id)
+      .then(apiData => setCharacters(apiData))
       .finally(() => setLoading(false))
   }, [])
 
   return {characters, loading}
 }
+
+export default useGallery
